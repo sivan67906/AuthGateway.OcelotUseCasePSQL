@@ -27,11 +27,13 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateIssuerSigningKey = true,
             ValidIssuer = builder.Configuration["Jwt:Issuer"],
             ValidAudience = builder.Configuration["Jwt:Audience"],
-            IssuerSigningKey = new SymmetricSecurityKey(keyBytes)
+            IssuerSigningKey = new SymmetricSecurityKey(keyBytes),
+            ClockSkew = TimeSpan.Zero // Reduce clock skew for precise expiration
         };
     });
 
 // CORS: allow Blazor WebAssembly dev origins to call the gateway
+// CRITICAL: AllowCredentials is required for HttpOnly cookie support
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("BlazorWasm",
@@ -39,10 +41,13 @@ builder.Services.AddCors(options =>
         {
             policy.WithOrigins(
                     "https://localhost:22500",
-                    "http://localhost:22400")
+                    "http://localhost:22400",
+                    "https://localhost:22501",  // Additional dev ports
+                    "http://localhost:22401")
                   .AllowAnyHeader()
                   .AllowAnyMethod()
-                  .AllowCredentials();
+                  .AllowCredentials()  // CRITICAL: Required for cookies
+                  .WithExposedHeaders("Set-Cookie"); // Expose Set-Cookie header
         });
 });
 
@@ -50,8 +55,12 @@ builder.Services.AddOcelot(builder.Configuration);
 
 var app = builder.Build();
 
+// Important: Order matters!
 app.UseRouting();
+
+// CORS must be before Ocelot for preflight requests
 app.UseCors("BlazorWasm");
+
 app.UseAuthentication();
 app.UseAuthorization();
 
