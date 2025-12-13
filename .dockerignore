@@ -1,0 +1,41 @@
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio
+.vs/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# JetBrains Rider
+.idea/
+
+# Build output
+*.dll
+*.exe
+*.pdb
+
+# Test results
+TestResults/
+
+# NuGet
+*.nupkg
+packages/
+
+# Misc
+*.log
+*.tmp
+Dockerfile
+.dockerignore
+docker-compose*.yml
+*.md
+LICENSE
+.git/
+.gitignore
+ocelot.docker.json

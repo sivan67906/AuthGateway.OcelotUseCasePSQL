@@ -40,10 +40,14 @@ builder.Services.AddCors(options =>
         policy =>
         {
             policy.WithOrigins(
+                    // Development ports
                     "https://localhost:22500",
                     "http://localhost:22400",
-                    "https://localhost:22501",  // Additional dev ports
-                    "http://localhost:22401")
+                    "https://localhost:22501",
+                    "http://localhost:22401",
+                    // Docker ports
+                    "https://localhost:27704",
+                    "http://localhost:27707")
                   .AllowAnyHeader()
                   .AllowAnyMethod()
                   .AllowCredentials()  // CRITICAL: Required for cookies

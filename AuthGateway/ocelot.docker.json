@@ -1,0 +1,361 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/auth/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "webapi",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/auth/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options", "Patch" ],
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": false,
+        "UseCookieContainer": true,
+        "UseTracing": false,
+        "MaxConnectionsPerServer": 100
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/auth/admin/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "webapi",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/auth/admin/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options", "Patch" ],
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": false,
+        "UseCookieContainer": true,
+        "UseTracing": false,
+        "MaxConnectionsPerServer": 100
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/auth/department/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "webapi",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/auth/department/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options", "Patch" ],
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": false,
+        "UseCookieContainer": true,
+        "UseTracing": false,
+        "MaxConnectionsPerServer": 100
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/auth/feature/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "webapi",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/auth/feature/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options", "Patch" ],
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": false,
+        "UseCookieContainer": true,
+        "UseTracing": false,
+        "MaxConnectionsPerServer": 100
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/auth/page/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "webapi",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/auth/page/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options", "Patch" ],
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": false,
+        "UseCookieContainer": true,
+        "UseTracing": false,
+        "MaxConnectionsPerServer": 100
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/auth/pagefeaturemapping/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "webapi",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/auth/pagefeaturemapping/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options", "Patch" ],
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": false,
+        "UseCookieContainer": true,
+        "UseTracing": false,
+        "MaxConnectionsPerServer": 100
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/auth/pagepermissionmapping/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "webapi",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/auth/pagepermissionmapping/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options", "Patch" ],
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": false,
+        "UseCookieContainer": true,
+        "UseTracing": false,
+        "MaxConnectionsPerServer": 100
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/auth/permission/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "webapi",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/auth/permission/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options", "Patch" ],
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": false,
+        "UseCookieContainer": true,
+        "UseTracing": false,
+        "MaxConnectionsPerServer": 100
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/auth/role/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "webapi",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/auth/role/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options", "Patch" ],
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": false,
+        "UseCookieContainer": true,
+        "UseTracing": false,
+        "MaxConnectionsPerServer": 100
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/auth/rolepermissionmapping/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "webapi",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/auth/rolepermissionmapping/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options", "Patch" ],
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": false,
+        "UseCookieContainer": true,
+        "UseTracing": false,
+        "MaxConnectionsPerServer": 100
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/auth/rolefeaturemapping/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "webapi",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/auth/rolefeaturemapping/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options", "Patch" ],
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": false,
+        "UseCookieContainer": true,
+        "UseTracing": false,
+        "MaxConnectionsPerServer": 100
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/auth/rolehierarchymapping/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "webapi",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/auth/rolehierarchymapping/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options", "Patch" ],
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": false,
+        "UseCookieContainer": true,
+        "UseTracing": false,
+        "MaxConnectionsPerServer": 100
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/auth/rolepagepermissionmapping/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "webapi",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/auth/rolepagepermissionmapping/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options", "Patch" ],
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": false,
+        "UseCookieContainer": true,
+        "UseTracing": false,
+        "MaxConnectionsPerServer": 100
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/auth/userrolemapping/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "webapi",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/auth/userrolemapping/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options", "Patch" ],
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": false,
+        "UseCookieContainer": true,
+        "UseTracing": false,
+        "MaxConnectionsPerServer": 100
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/auth/roledepartmentmapping/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "webapi",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/auth/roledepartmentmapping/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options", "Patch" ],
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": false,
+        "UseCookieContainer": true,
+        "UseTracing": false,
+        "MaxConnectionsPerServer": 100
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/auth/useraccess/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "webapi",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/auth/useraccess/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options", "Patch" ],
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": false,
+        "UseCookieContainer": true,
+        "UseTracing": false,
+        "MaxConnectionsPerServer": 100
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/menu/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "webapi",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/menu/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options", "Patch" ],
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": false,
+        "UseCookieContainer": true,
+        "UseTracing": false,
+        "MaxConnectionsPerServer": 100
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/auth/useraddresses/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "webapi",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/auth/useraddresses/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options", "Patch" ],
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": false,
+        "UseCookieContainer": true,
+        "UseTracing": false,
+        "MaxConnectionsPerServer": 100
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/health",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "webapi",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/health",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "webapi",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options", "Patch" ],
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": false,
+        "UseCookieContainer": true,
+        "UseTracing": false,
+        "MaxConnectionsPerServer": 100
+      }
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:27705"
+  }
+}
