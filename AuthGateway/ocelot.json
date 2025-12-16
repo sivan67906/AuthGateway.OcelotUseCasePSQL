@@ -353,6 +353,28 @@
       }
     },
     {
+      "DownstreamPathTemplate": "/api/company/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 45500
+        },
+        {
+          "Host": "localhost",
+          "Port": 45000
+        }
+      ],
+      "UpstreamPathTemplate": "/api/company/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options", "Patch" ],
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": false,
+        "UseCookieContainer": true,
+        "UseTracing": false,
+        "MaxConnectionsPerServer": 100
+      }
+    },
+    {
       "DownstreamPathTemplate": "/health",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
